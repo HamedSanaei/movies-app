@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 
 import Movies from "./components/movies";
 import Customers from "./components/common/customers";
@@ -8,6 +7,9 @@ import NavBar from "./components/common/navBar";
 import MovieForm from "./components/common/movieForm";
 import { Switch, Route, Redirect } from "react-router-dom";
 import NotFound from "./components/common/notFound";
+import LoginForm from "./components/loginForm";
+
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -16,6 +18,8 @@ class App extends Component {
         <NavBar />
         <main className="container">
           <Switch>
+            <Route path="/login" component={LoginForm}></Route>
+
             <Route path="/movies/:id" component={MovieForm}></Route>
             <Route path="/movies" component={Movies}></Route>
             <Route path="/customers" component={Customers}></Route>
