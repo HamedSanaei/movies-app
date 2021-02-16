@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { genres, getGenres } from "./../fakeGenreService";
+import React  from "react";
+import {  getGenres } from "./../fakeGenreService";
 import Joi from "joi-browser";
 import { saveMovie, getMovie } from "./../fakeMovieService";
 import Form from "./form";
@@ -46,7 +46,7 @@ class MovieForm extends Form {
     return {
       _id: movie._id,
       title: movie.title,
-      genreId: movie.title,
+
       genreId: movie.genre._id,
       numberInStock: movie.numberInStock,
       dailyRentalRate: movie.dailyRentalRate,
