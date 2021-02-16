@@ -8,6 +8,7 @@ import MovieForm from "./components/common/movieForm";
 import { Switch, Route, Redirect } from "react-router-dom";
 import NotFound from "./components/common/notFound";
 import LoginForm from "./components/loginForm";
+import Register from "./components/registerForm";
 
 import "./App.css";
 
@@ -19,7 +20,7 @@ class App extends Component {
         <main className="container">
           <Switch>
             <Route path="/login" component={LoginForm}></Route>
-
+            <Route path="/register" component={Register}></Route>
             <Route path="/movies/:id" component={MovieForm}></Route>
             <Route path="/movies" component={Movies}></Route>
             <Route path="/customers" component={Customers}></Route>
